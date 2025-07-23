@@ -1,10 +1,6 @@
-export default function Form({ formData, setFormData }) {
+export default function Form({ formData, setFormData, handleSubmit }) {
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault(), console.log("Submit sent with data:", formData);
-      }}
-    >
+    <form onSubmit={handleSubmit}>
       {/* Author */}
       <div className="mb-3">
         <label htmlFor="author" className="form-label">
